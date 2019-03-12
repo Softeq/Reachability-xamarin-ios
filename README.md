@@ -8,6 +8,14 @@ This project is maintained by Softeq Development Corp.
 
 We specialize in developing mobile applications using Xamarin and native technology stack.
 
+## Installation
+
+NuGet:
+
+```
+Install-Package ReachabilityBindings
+```
+
 ## License
 
 Reachability binding library for iOS is released under the MIT license. See [LICENSE](LICENSE) for details.
