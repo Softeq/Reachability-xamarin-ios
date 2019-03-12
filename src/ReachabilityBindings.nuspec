@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<package >
+  <metadata>
+    <id>ReachabilityBindings</id>
+    <version>3.2.0</version>
+    <title>Reachability for Xamarin.iOS</title>
+    <authors>Softeq Development Corp.</authors>
+    <owners>Softeq Development Corp.</owners>
+    <licenseUrl>https://github.com/Softeq/Reachability-xamarin-ios/blob/master/LICENSE</licenseUrl>
+    <projectUrl>https://github.com/Softeq/Reachability-xamarin-ios</projectUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>Xamarin iOS binding library of Reachability.</description>
+    <copyright>Copyright 2019 Softeq Development Corp.</copyright>
+    <tags>Reachability internet connection ios xamarin binding softeq library uikit ui framework</tags>
+    <releaseNotes>First release</releaseNotes>
+  </metadata>
+</package>
