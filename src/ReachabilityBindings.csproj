@@ -1,51 +1,43 @@
-<?xml version="1.0" encoding="utf-8"?>
-<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+<Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
-    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
-    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{0F71AA11-DDA7-4FD9-A98E-359C574BD560}</ProjectGuid>
-    <ProjectTypeGuids>{8FFB629D-F513-41CE-95D2-7ECE97B6EEEC};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
-    <OutputType>Library</OutputType>
-    <RootNamespace>ReachabilityBindings</RootNamespace>
-    <AssemblyName>ReachabilityBindings</AssemblyName>
-    <IPhoneResourcePrefix>Resources</IPhoneResourcePrefix>
+    <TargetFramework>net6.0-ios10</TargetFramework>
+    <IsBindingProject>true</IsBindingProject>
+    <SupportedOSPlatformVersion>8.0</SupportedOSPlatformVersion>
+
+    <!-- Assembly & NuGet Info -->
+    <Title>Reachability for Xamarin.iOS</Title>
+    <Description>Xamarin iOS binding library of Reachability.</Description>
+    <Company>Softeq Development Corporation</Company>
+    <Copyright>Copyright © 2018 Softeq Development Corporation</Copyright>
+    <Version>3.2.0</Version>
+    <Authors>Softeq Development Corp.</Authors>
+    <Owners>Softeq Development Corp.</Owners>
+    <PackageProjectUrl>https://github.com/Softeq/Reachability-xamarin-ios</PackageProjectUrl>
+    <PackageLicenseFile>LICENSE</PackageLicenseFile>
+    <PackageTags>reachability;internet connection;ios;xamarin;binding;softeq;library;uikit;ui</PackageTags>
+    <PackageReadmeFile>README.md</PackageReadmeFile>
+    <PackageReleaseNotes>Migration to .NET6</PackageReleaseNotes>
   </PropertyGroup>
-  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
-    <DebugSymbols>true</DebugSymbols>
-    <DebugType>full</DebugType>
-    <Optimize>false</Optimize>
-    <OutputPath>bin\Debug</OutputPath>
-    <DefineConstants>DEBUG;</DefineConstants>
-    <ErrorReport>prompt</ErrorReport>
-    <WarningLevel>4</WarningLevel>
-    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
-  </PropertyGroup>
-  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
-    <Optimize>true</Optimize>
-    <OutputPath>bin\Release</OutputPath>
-    <DefineConstants></DefineConstants>
-    <ErrorReport>prompt</ErrorReport>
-    <WarningLevel>4</WarningLevel>
-    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
-  </PropertyGroup>
+
   <ItemGroup>
-    <Reference Include="System" />
-    <Reference Include="Xamarin.iOS" />
+    <None Include="../LICENSE" Visible="False" Pack="true" PackagePath="" />
+    <None Include="../README.md" Visible="False" Pack="true" PackagePath="" />
   </ItemGroup>
-  <ItemGroup>
-    <Compile Include="Properties\AssemblyInfo.cs" />
-  </ItemGroup>
+
   <ItemGroup>
     <ObjcBindingApiDefinition Include="ApiDefinition.cs" />
+    <ObjcBindingCoreSource Include="StructsAndEnums.cs" />
   </ItemGroup>
+
   <ItemGroup>
-    <ObjcBindingCoreSource Include="Structs.cs" />
+    <None Update="Reachability.framework/**" Visible="False" />
   </ItemGroup>
+
   <ItemGroup>
     <NativeReference Include="Reachability.framework">
       <Kind>Framework</Kind>
       <SmartLink>False</SmartLink>
+      <Frameworks>SystemConfiguration Foundation</Frameworks>
     </NativeReference>
   </ItemGroup>
-  <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.ObjCBinding.CSharp.targets" />
 </Project>
