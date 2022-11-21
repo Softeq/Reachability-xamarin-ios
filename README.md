@@ -1,5 +1,7 @@
 # Reachability-xamarin-ios
 
+[![Build Status](https://dev.azure.com/SofteqDevelopment/Xamarin.Binding.Libraries/_apis/build/status/Reachability%20iOS%20Library/Reachability-dev?branchName=master)](https://dev.azure.com/SofteqDevelopment/Xamarin.Binding.Libraries/_build/latest?definitionId=412&branchName=master)  [![NuGet Badge](https://buildstats.info/nuget/ReachabilityBindings)](https://www.nuget.org/packages/ReachabilityBindings/)
+
 Xamarin binding library for Reachability iOS framework https://github.com/tonymillion/Reachability
 
 ## About
