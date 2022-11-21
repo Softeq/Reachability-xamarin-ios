@@ -30,10 +30,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <None Update="Reachability.framework/**" Visible="False" />
-  </ItemGroup>
-
-  <ItemGroup>
     <NativeReference Include="Reachability.framework">
       <Kind>Framework</Kind>
       <SmartLink>False</SmartLink>
